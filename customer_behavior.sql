@@ -68,7 +68,7 @@ SELECT
 	ROW_NUMBER () OVER (PARTITION BY department ORDER BY COUNT(product_id)) row_num
 FROM instacart_mdl.orders
 GROUP BY 1,2
-ORDER BY 3 )
+ORDER BY 3)
 
 SELECT 
 	department,
@@ -86,9 +86,9 @@ FROM (SELECT
 	aisle,
 	COUNT(*) aisle_count,
 	DENSE_RANK () OVER (ORDER BY COUNT(*) DESC) rnk
-	  FROM instacart_mdl.orders
-	  WHERE add_to_cart_order = 1
-	  GROUP BY 1) aisle_rank
+      FROM instacart_mdl.orders
+      WHERE add_to_cart_order = 1
+      GROUP BY 1) aisle_rank
 WHERE rnk BETWEEN 1 AND 5;
 
 
