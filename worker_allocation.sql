@@ -34,6 +34,7 @@ FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 2 DESC;
 
+
 -- We can also categorize the hour of day 
 
 SELECT 
@@ -46,6 +47,7 @@ SELECT
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 2 DESC;
+
 
 -- Which aisle(s) and department(s) will be the busiest in terms of day and hour?
 
