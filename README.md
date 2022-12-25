@@ -23,3 +23,10 @@
 1. Tools: DbVisualizer & PostgreSQL 
 
 2. Dataset provided by [Modern Data Lab](https://www.linkedin.com/company/moderndatalab/mycompany/)
+
+   - 248,081 rows
+   - 13 columns ([Entity Relationship Diagram](https://github.com/harris-wan-analyst/instacart_proj/blob/main/Entity%20Relationship%20Diagram.png))
+   - data type: numeric & varchar
+
+------
+### Key Findings
