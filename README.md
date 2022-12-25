@@ -28,6 +28,8 @@
    - 13 columns ([Entity Relationship Diagram](https://github.com/harris-wan-analyst/instacart_proj/blob/main/Entity%20Relationship%20Diagram.png))
    - data type: numeric & varchar
 
+3. Tableau (Coming Tomorrow!)
+
 ------
 ### Key Findings
 1. Custumer Order Behavior
@@ -39,6 +41,13 @@
 
 2. Instacart traffic 
 
-   - As expected, weekends have more customers and more orders followed by Monday
-   - Customers tend to shop in the afternoon (2pm - 4pm) and in mornings (9am - 11am)
+   - Weekends have more customers and purchase an average of 2 more products in each order compared to weekdays
+   - Customers tend to shop in afternoons (2pm - 4pm) and in mornings (9am - 11am)
    - The department (produce) and aisles (fresh fruits & fresh vegetables) are the busiest everyday in the afternoon
+
+------
+### Recommendations 
+
+- Partner with local fruit and veggie stores to meet customers' huge demand in fresh fruits and vegetables to prevent pontential shortage
+- Ensure a variety of products are in stock in different places as customers tend to make repeat purchases
+- Have more personal shoppers available on weekends and in 9 - 11 am and 2 - 4 pm to meet customer demand and satisfaction
