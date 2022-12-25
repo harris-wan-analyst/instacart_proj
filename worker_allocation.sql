@@ -11,6 +11,7 @@ FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 3 DESC;
 
+
 -- We can also look in the form of weekday and weekend.
 
 SELECT 
@@ -34,6 +35,7 @@ FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 2 DESC;
 
+
 -- We can also categorize the hour of day 
 
 SELECT 
@@ -46,6 +48,7 @@ SELECT
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 2 DESC;
+
 
 -- Which aisle(s) and department(s) will be the busiest in terms of day and hour?
 
@@ -72,26 +75,28 @@ FROM product_rank
 WHERE rnk = 1
 ORDER BY 5 DESC;
 
--- Which aisle(s) and department(s) will be the busiest in terms of day and hour?
 
+-- Similarly which aisle(s) and department(s) will be the the least busiest in terms of day and hour?
 
 WITH product_rank AS (
 SELECT 
 	order_day_of_week,
 	order_hour_of_day,
+	aisle,
 	department,
 	COUNT(product_id) prod_order,
 	DENSE_RANK () OVER 
 		(PARTITION BY order_day_of_week
 		 ORDER BY COUNT(product_id)) rnk
 FROM instacart_mdl.orders
-GROUP BY 1, 2, 3)
+GROUP BY 1, 2, 3, 4)
 
 SELECT
 	order_day_of_week,
 	order_hour_of_day,
+	aisle,
 	department,
 	prod_order
 FROM product_rank 
 WHERE rnk = 1
-ORDER BY 4;
+ORDER BY 5;
