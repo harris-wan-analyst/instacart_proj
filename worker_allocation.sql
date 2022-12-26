@@ -5,8 +5,8 @@
 SELECT 
 	order_day_of_week,
 	COUNT(DISTINCT user_id) user_count,
-	COUNT(product_id) prod_order,
-	COUNT(product_id) / COUNT(DISTINCT user_id) user_avg_purchase
+	COUNT(order_id) prod_order,
+	COUNT(order_id) / COUNT(DISTINCT user_id) user_avg_purchase
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 3 DESC;
@@ -19,8 +19,8 @@ SELECT
 	ELSE 'Weekday' 
 	END AS time_period,
 	COUNT(DISTINCT user_id) user_count,
-	COUNT(product_id) prod_order,
-	COUNT(product_id) / COUNT(DISTINCT user_id) user_avg_purchase
+	COUNT(order_id) prod_order,
+	COUNT(order_id) / COUNT(DISTINCT user_id) user_avg_purchase
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 3 DESC;
@@ -30,7 +30,7 @@ ORDER BY 3 DESC;
 
 SELECT 
 	order_hour_of_day,
-	COUNT(product_id) prod_order
+	COUNT(order_id) prod_order
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 2 DESC;
@@ -44,7 +44,7 @@ SELECT
 		 WHEN order_hour_of_day BETWEEN 18 AND 21 THEN 'Evening'
 		 ELSE 'Night'
 	END AS part_of_day,
-	COUNT(product_id) prod_order
+	COUNT(order_id) prod_order
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 2 DESC;
@@ -58,7 +58,7 @@ SELECT
 	order_hour_of_day,
 	aisle,
 	department,
-	COUNT(product_id) prod_order,
+	COUNT(order_id) prod_order,
 	DENSE_RANK () OVER 
 		(PARTITION BY order_day_of_week
 		 ORDER BY COUNT(product_id) DESC) rnk
@@ -84,7 +84,7 @@ SELECT
 	order_hour_of_day,
 	aisle,
 	department,
-	COUNT(product_id) prod_order,
+	COUNT(order_id) prod_order,
 	DENSE_RANK () OVER 
 		(PARTITION BY order_day_of_week
 		 ORDER BY COUNT(product_id)) rnk
