@@ -61,7 +61,7 @@ SELECT
 	COUNT(order_id) order_count,
 	DENSE_RANK () OVER 
 		(PARTITION BY order_day_of_week
-		 ORDER BY COUNT(product_id) DESC) rnk
+		 ORDER BY COUNT(order_id) DESC) rnk
 FROM instacart_mdl.orders
 GROUP BY 1, 2, 3, 4)
 
@@ -87,7 +87,7 @@ SELECT
 	COUNT(order_id) order_count,
 	DENSE_RANK () OVER 
 		(PARTITION BY order_day_of_week
-		 ORDER BY COUNT(product_id)) rnk
+		 ORDER BY COUNT(order_id)) rnk
 FROM instacart_mdl.orders
 GROUP BY 1, 2, 3, 4)
 
