@@ -28,7 +28,7 @@
    - 13 columns ([Entity Relationship Diagram](https://github.com/harris-wan-analyst/instacart_proj/blob/main/Entity%20Relationship%20Diagram.png))
    - data type: numeric & varchar
 
-3. Tableau (Coming Tomorrow!)
+3. Tableau ([link](https://public.tableau.com/app/profile/harris.wan.analyst/viz/InstacartDashboard_16720277423100/InstacartDashborad))
 
 ------
 ### Key Findings
