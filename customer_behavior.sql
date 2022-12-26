@@ -5,7 +5,7 @@
 
 SELECT 
 	COUNT(DISTINCT user_id) user_count,
-	COUNT(DISTINCT product_id) order_count,
+	COUNT(DISTINCT product_id) prod_count,
 	COUNT(DISTINCT aisle_id) aisle_count,
 	COUNT(DISTINCT department_id) department_count
 FROM instacart_mdl.orders;
