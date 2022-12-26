@@ -15,7 +15,7 @@ FROM instacart_mdl.orders;
 
 WITH user_product_count AS (
 SELECT 
-	COUNT(product_id) order_count
+	COUNT(order_id) order_count
 FROM instacart_mdl.orders
 GROUP BY user_id)
 
@@ -44,7 +44,7 @@ WITH department_orders AS (
 SELECT 
 	department,
 	product_name, 
-	COUNT(product_id) order_count,
+	COUNT(order_id) order_count,
 	ROW_NUMBER () OVER (PARTITION BY department ORDER BY COUNT(product_id) DESC) row_num
 FROM instacart_mdl.orders
 GROUP BY 1,2
@@ -64,7 +64,7 @@ WITH department_orders AS (
 SELECT 
 	department,
 	product_name, 
-	COUNT(product_id) order_count,
+	COUNT(order_id) order_count,
 	ROW_NUMBER () OVER (PARTITION BY department ORDER BY COUNT(product_id)) row_num
 FROM instacart_mdl.orders
 GROUP BY 1,2
