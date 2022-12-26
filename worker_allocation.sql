@@ -6,7 +6,7 @@ SELECT
 	order_day_of_week,
 	COUNT(DISTINCT user_id) user_count,
 	COUNT(order_id) prod_order,
-	CEIL (COUNT(order_id) / COUNT(DISTINCT user_id)) user_avg_purchase
+	ROUND (COUNT(order_id)::DECIMAL / COUNT(DISTINCT user_id)) user_avg_purchase
 FROM instacart_mdl.orders
 GROUP BY 1
 ORDER BY 3 DESC;
