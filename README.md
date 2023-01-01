@@ -8,8 +8,7 @@
 
 ![download](https://user-images.githubusercontent.com/117702329/209454081-c5bfebdd-83b1-4808-8783-b41e7455bc28.png)
 
-------
-### Motivation
+## Motivation
 1. Understand customer order behavior & repeat purchases
  
    - help Instacart find new retailers or grocers to satisfy customer needs
@@ -18,8 +17,8 @@
  
    - help Instacart effectively allocate the number of workers to meet customer demand
 
-------
-### Project Details
+
+## Project Details
 1. Tools: DbVisualizer & PostgreSQL 
 
 2. Dataset provided by [Modern Data Lab](https://www.linkedin.com/company/moderndatalab/mycompany/)
@@ -30,8 +29,8 @@
 
 3. Tableau ([link](https://public.tableau.com/app/profile/harris.wan.analyst/viz/InstacartDashboard_16720277423100/InstacartDashborad))
 
-------
-### Key Findings
+
+## Key Findings
 1. Custumer Order Behavior
 
    - Customers commonly ordered 5 products in each purchase 
@@ -45,8 +44,8 @@
    - Customers tend to shop in afternoons (2pm - 4pm) and in mornings (9am - 11am)
    - The department (produce) and aisles (fresh fruits & fresh vegetables) are the busiest everyday in the afternoon
 
-------
-### Recommendations 
+
+## Recommendations 
 
 - Partner with local fruit and veggie stores to meet customers' huge demand in fresh fruits and vegetables to prevent pontential shortage
 - Ensure a variety of products are in stock in different places as customers tend to make repeat purchases
